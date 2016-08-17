@@ -1,0 +1,104 @@
+<html ng-app='mylog'>
+<head>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<style>
+	.err-block {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #ec4949;;
+}
+	</style>
+<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+	
+	<script src="/js/angular.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+	
+	<script src="/js/app.js"></script>
+	</head>
+<body ng-controller='logctrl'>
+	<form class="form-horizontal">
+  <fieldset>
+    <div id="legend">
+      <legend class="">Register</legend>
+    </div>
+    <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="username">Username</label>
+      <div class="controls">
+        <input type="text" id="username" ng-model="username" placeholder="username" class="input-xlarge">
+        <p class="err-block" ng-show='Isemail'>{{Msgname}}</p>
+      </div>
+    </div>
+	  
+	  <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="username">Staff Number</label>
+      <div class="controls">
+        <input type="number" id="username" ng-model="staffno" placeholder="staffno" class="input-xlarge">
+        <p class="err-block" ng-show='Isstaffno'>{{Msgstaffno}}</p>
+      </div>
+    </div>
+	  
+	  <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="username">Website or Url</label>
+      <div class="controls">
+        <input type="url" id="username" ng-model="url" placeholder="ng-model" class="input-xlarge">
+        <p class="err-block" ng-show='Isurl'>{{Msgurl}}</p>
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="email">E-mail</label>
+      <div class="controls">
+        <input type="email" id="email" ng-model="email" placeholder="email" class="input-xlarge">
+        <p class="err-block" ng-show='Isemail'>{{Msgemail}}</p>
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- Password-->
+      <label class="control-label" for="password">Password</label>
+      <div class="controls">
+        <input type="password" id="password" ng-model="password" placeholder="password" class="input-xlarge">
+        <p class="err-block" ng-show='Ispwd'>{{Msgpwd}}</p>
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- Password -->
+      <label class="control-label"  for="password_confirm">Password (Confirm)</label>
+      <div class="controls">
+        <input type="password" id="password_confirm" ng-model="password_confirm" placeholder="password_confirm" class="input-xlarge">
+        <p class="err-block" ng-show='Ispwd_con'>{{Msgpwd_con}}</p>
+      </div>
+    </div>
+	  <div class="control-group">
+      <!-- Password -->
+      <label class="control-label"  for="comments">Comment:</label>
+      <div class="controls">
+        <textarea class="form-control" rows="5" id="comment" ng-model='comment'></textarea>
+        <p class="err-block" ng-show='Iscomments'>{{Msgcomments}}</p>
+      </div>
+    </div>
+	  
+ 
+    <div class="control-group">
+      <!-- Button -->
+      <div class="controls">
+        <button class="btn btn-success" ng-click='register()'>Register</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+	</body>
+</html>
