@@ -8,7 +8,7 @@ var server = http.createServer(app);
 var validator = require('express-validator');
 
 
-// use of middleware
+// use of middlewares
 app.use(validator());
 
 //root directory of the project
